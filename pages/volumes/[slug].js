@@ -10,7 +10,9 @@ export default function Volume() {
   const volumeIndex = volumes.findIndex(
     (volumeToFind) => volumeToFind.slug === slug
   );
-  const nextVolumeIndex = volumeIndex < 2 ? volumeIndex + 1 : 0;
+  const nextVolumeIndex =
+    volumeIndex < volumes.length - 1 ? volumeIndex + 1 : 0;
+  console.log("volumes.length -1", volumes.length - 1);
 
   if (!volume) {
     return null;
